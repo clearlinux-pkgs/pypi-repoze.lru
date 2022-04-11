@@ -4,7 +4,7 @@
 #
 Name     : pypi-repoze.lru
 Version  : 0.7
-Release  : 50
+Release  : 51
 URL      : https://files.pythonhosted.org/packages/12/bc/595a77c4b5e204847fdf19268314ef59c85193a9dc9f83630fc459c0fee5/repoze.lru-0.7.tar.gz
 Source0  : https://files.pythonhosted.org/packages/12/bc/595a77c4b5e204847fdf19268314ef59c85193a9dc9f83630fc459c0fee5/repoze.lru-0.7.tar.gz
 Summary  : A tiny LRU cache implementation and decorator
@@ -14,14 +14,11 @@ Requires: pypi-repoze.lru-license = %{version}-%{release}
 Requires: pypi-repoze.lru-python = %{version}-%{release}
 Requires: pypi-repoze.lru-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
-Provides: repoze.lru
-Provides: repoze.lru-python
-Provides: repoze.lru-python3
-BuildRequires : pypi(pluggy)
-BuildRequires : py-python
-BuildRequires : pytest
-BuildRequires : tox
-BuildRequires : pypi(virtualenv)
+BuildRequires : pypi(py)
+BuildRequires : pypi-pluggy
+BuildRequires : pypi-pytest
+BuildRequires : pypi-tox
+BuildRequires : pypi-virtualenv
 
 %description
 
@@ -62,7 +59,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641488645
+export SOURCE_DATE_EPOCH=1649700051
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
